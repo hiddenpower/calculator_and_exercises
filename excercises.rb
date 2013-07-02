@@ -1,46 +1,49 @@
-arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-arr.each {|n| puts n}
+#1
+array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+array.each {|x| puts x}
 
+#2
+array.each {|x| puts x if x > 5}
 
-arr.each {|n| puts n if n > 5}
+#3
+array.select {|x| x.odd?}
 
+#4
+array << 11
+array.unshift(0)
 
-arr.select {|n| n.odd?}
+#5
+array.pop
+array << 3
 
+#6
+array.uniq!
 
-arr.push(11)
-arr.unshift(0)
+#7
+"Arrays are ordered (integer indexed) lists of things (objects). Hashes are a collection of key-value pairs that are not ordered by an integer index,"
+"this pairs get enumerated according to the order they were inserted ."
+"Array elements are accessed by an integer(the index), hash values are accessed through via keys."
 
-
-arr.pop
-arr.push(3)
-
-
-arr.uniq!
-
-
-"An array is an ordered list of objects, while a hash is an unordered group of key/value pairs."
-"Array objects are accessible by integer, while hash values are accessible through their respective keys."
-
-
+#8
 hash = {:a => "hi", :b => "hello"}
 hash = {a: "hi", b: "hello"}
 
-
+#9
 h = { a: 1, b: 2, }
 h[:b]
+
+#10
 h[:e] = 5
 
+#13
+h.delete_if { |key, value| value < 3.5 }
 
-h.delete_if { |k, v| v < 3.5 }
+#14
+"Yes, hash values can be arrays"
+hash = {x: ["a", "b", "c"], y: [1, 2, 3]}
+"Yes, an array can be made of hashes"
+array = [{x: 1}, {y: 2}, {z: 3}]
 
-
-"Yes!"
-h = {a: [1, 2, 3], b: [4, 5, 6]}
-a = [{a: 1}, {b: 2}, {c: 3}]
-
-
-"I often check the documentation at http://ruby-doc.org first.  It lays out the core API"
-"in a very clear way, and provides and easy way to filter results. I find it easy to locate what I'm looking for."
-"I also look at the shorter list of methods/classes included at the ends of the books Begining Ruby"
-"and Programming Ruby. I keep them both around as PDFs for quick reference."
+#15
+"I like http://ruby-doc.org because it has everything you need to know about classes, methods, syntax and all the ruby stuff. The interface is simple. so it's easy to find what I'm looking for."
+"It also has examples and a comment section. I rarely look at any other websites when I have doubts."
